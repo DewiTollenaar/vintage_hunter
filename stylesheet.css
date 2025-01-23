@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #9cad8c;
+}
+
+h2 {
+  font-size: 1.8em;
+  padding: 0.5em;
+  padding-bottom: 0%;
+  text-align: center;
+  font-family: "Kanit", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+p {
+  font-family: "Kanit", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+header img {
+  width: 100px;
+  background-color: #ece0da;
+  padding-left: 0;
+  display: flex;
+  gap: 2em;
+}
+
+header {
+  background-color: #ece0da;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/*Bron: Omdat ik in die week ziek was heb ik de les gemist over de hamburger menu. Ik heb een voorbeeldcode gevraagd aan Ai voor 
+een hamburgermenu. De code die ik kreeg heb ik helemaal aangepast zodat de hamburgermenu precies werkte zoals mijn ontwerp. 
+Dit heb ik daarna in de les ook nog met de docent besproken. 
+Dit is de link van het gesprek tussen mij en Ai: https://www.perplexity.ai/search/how-do-i-make-a-hamburger-menu-.JPjDIE2Sb.gFbZyu6ECVA */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.hamburger-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-family: "Kanit", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: -100%;
+
+    background-color: #ece0da;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .hamburger-toggle:checked ~ .nav-menu {
+    top: 50px;
+  }
+
+  .hamburger-toggle:checked + .hamburger .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-toggle:checked + .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-toggle:checked + .hamburger .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+}
+
+main img {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.bekijk_hier img {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 1em;
+}
+.kilo_kilo img {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 0.5em;
+}
+
+.handleiding img {
+  width: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 1em;
+}
+
+.vintage_winkels img {
+  width: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 1em;
+}
+
+footer img {
+  width: 30px;
+}
+
+footer {
+  background-color: #ece0da;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0.5em;
+  gap: 2em;
+}
+
+/*Bron: Ik gebruik in mijn ontwerp teksten die in de afbeeldingen staan. Omdat ik niet wist hoe dit werkte heb ik een code aan Ai gevraagd. 
+Ik heb daarna om een nieuwe code gevraagd waarbij de tekst een link is. Ik probeerde dit eerst zelf te doen door de <h4> in een <a> te 
+veranderen, alleen dit werkte op een of andere manier niet. Uiteindelijk kwam de code op hetzelfde neer en heb ik dit naar mijn eigen ontwerp 
+aangepast. Dit heb ik daarna in de les ook nog met de docent besproken. 
+Dit is de link van het gesprek tussen mij en Ai: https://www.perplexity.ai/search/how-do-i-make-a-hamburger-menu-.JPjDIE2Sb.gFbZyu6ECVA */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.image-container img {
+  width: 350px;
+  height: auto;
+  display: block;
+  padding-bottom: 1em;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.7em;
+  font-weight: bolder;
+  font-family: "Pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2em;
+}
